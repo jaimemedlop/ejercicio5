@@ -17,5 +17,6 @@ public class ItemHolder {
         long id = lastID.incrementAndGet();
         item.setId(id);
         items.put(id, item);
+
     }
 }
