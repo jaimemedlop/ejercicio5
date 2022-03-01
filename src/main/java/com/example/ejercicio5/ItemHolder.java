@@ -2,6 +2,7 @@ package com.example.ejercicio5;
 
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
@@ -18,5 +19,13 @@ public class ItemHolder {
         item.setId(id);
         items.put(id, item);
 
+    }
+
+    public Collection<Item> getItems(){
+        return items.values();
+    }
+
+    public Item getItem(long id){
+        return items.get(id);
     }
 }
